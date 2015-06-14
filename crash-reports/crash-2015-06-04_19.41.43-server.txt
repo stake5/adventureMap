@@ -1,0 +1,176 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 6/4/15 7:41 PM
+Description: Watching Server
+
+java.lang.Error
+	at nq.a(SourceFile:49)
+	at ld.d(SourceFile:112)
+	at adm.a(SourceFile:277)
+	at adm.f(SourceFile:273)
+	at adm.b(SourceFile:607)
+	at adm.a(SourceFile:2083)
+	at adm.c(SourceFile:2166)
+	at adm.x(SourceFile:2051)
+	at amy.e(SourceFile:1161)
+	at amy.n(SourceFile:1094)
+	at amy.b(SourceFile:916)
+	at le.h(SourceFile:332)
+	at le.c(SourceFile:202)
+	at net.minecraft.server.MinecraftServer.B(SourceFile:599)
+	at ko.B(SourceFile:299)
+	at net.minecraft.server.MinecraftServer.A(SourceFile:535)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:451)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at nq.a(SourceFile:49)
+	at ld.d(SourceFile:112)
+	at adm.a(SourceFile:277)
+	at adm.f(SourceFile:273)
+	at adm.b(SourceFile:607)
+	at adm.a(SourceFile:2083)
+	at adm.c(SourceFile:2166)
+	at adm.x(SourceFile:2051)
+	at amy.e(SourceFile:1161)
+	at amy.n(SourceFile:1094)
+	at amy.b(SourceFile:916)
+	at le.h(SourceFile:332)
+	at le.c(SourceFile:202)
+	at net.minecraft.server.MinecraftServer.B(SourceFile:599)
+	at ko.B(SourceFile:299)
+	at net.minecraft.server.MinecraftServer.A(SourceFile:535)
+
+-- Thread Dump --
+Details:
+	Threads: "File IO Thread" Id=39 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at auc.c(SourceFile:51)
+	at auc.run(SourceFile:30)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #1" Id=21 RUNNABLE
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@4d0add45
+	-  locked java.util.Collections$UnmodifiableSet@43cd2a94
+	-  locked sun.nio.ch.WindowsSelectorImpl@47f2b635
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	...
+
+
+"Server Watchdog" Id=37 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at kp.run(SourceFile:43)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #0" Id=20 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@2f020af
+	-  locked java.util.Collections$UnmodifiableSet@190b2541
+	-  locked sun.nio.ch.WindowsSelectorImpl@3338257e
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	...
+
+
+"Server console handler" Id=18 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	-  locked java.io.BufferedInputStream@61297e32
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	-  locked java.io.InputStreamReader@62dfdfe0
+	at java.io.InputStreamReader.read(Unknown Source)
+	...
+
+
+"DestroyJavaVM" Id=17 RUNNABLE
+
+
+"Server thread" Id=15 RUNNABLE
+	at nq.a(SourceFile:49)
+	at ld.d(SourceFile:112)
+	at adm.a(SourceFile:277)
+	at adm.f(SourceFile:273)
+	at adm.b(SourceFile:607)
+	at adm.a(SourceFile:2083)
+	at adm.c(SourceFile:2166)
+	at adm.x(SourceFile:2051)
+	...
+
+
+"Server Infinisleeper" Id=14 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at ko$1.run(SourceFile:65)
+
+
+"Snooper Timer" Id=13 TIMED_WAITING on java.util.TaskQueue@223edfd7
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@223edfd7
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+
+"Attach Listener" Id=5 RUNNABLE
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@50df0d3b
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@50df0d3b
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@7a2d31fc
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@7a2d31fc
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+
+
+Stacktrace:
+	at kp.run(SourceFile:59)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.6
+	Operating System: Windows 7 (amd64) version 6.1
+	CPU: 8x Intel(R) Core(TM) i7-3610QM CPU @ 2.30GHz
+	Java Version: 1.8.0_45, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 2666887136 bytes (2543 MB) / 3166699520 bytes (3020 MB) up to 3166699520 bytes (3020 MB)
+	JVM Flags: 2 total; -Xmx3072M -Xms3072M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [lf['Rylath'/31, l='Herobrine's Mansion', x=-34.58, y=96.84, z=133.68]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

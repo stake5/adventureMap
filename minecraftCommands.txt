@@ -1,0 +1,43 @@
+/****************************************************************************
+* add blocks
+****************************************************************************/
+////////Template////////////
+/fill <x y z> <x y z> <block type> <number of block type> replace
+
+////////Examples////////////////
+/fill ~1 ~ ~ ~11 ~ ~10 stone 8 replace
+
+/fill ~1 ~ ~ ~11 ~ ~10 air 1 replace 
+
+/****************************************************************************
+* spawn custom entities
+****************************************************************************/
+
+/summon Villager ~ ~1 ~ {Invulnerable:1,CustomName:Shabadoo,Profession:2,Career:1,
+Offers:{Recipes:[
+  {buy:{id:apple,Count:10},sell:{id:emerald,Count:1}},
+  {buy:{id:emerald,Count:1},sell:{id:wool,Count:2}}
+]}
+
+/summon Villager ~ ~1 ~ {Invulnerable:1,CustomName:Halbert5150,Profession:2,Career:1,CareerLevel:4,Offers:{Recipes:[
+  {buy:{id:apple,Count:10},sell:{id:emerald,Count:1}},
+  {buy:{id:emerald,Count:1},sell:{id:wool,Damage:11,Count:2}},
+  {buy:{id:emerald,Count:1},buyB:{id:dirt,Count:2},sell:{id:mycelium,Count:2}},
+  {buy:{id:emerald,Count:15},buyB:{id:iron_pickaxe,Count:1},sell:{id:iron_pickaxe,Count:1,tag:{ench:[{id:32,lvl:4},{id:34,lvl:3}]}}}
+]}}
+
+
+/****************************************************************************
+* scoreboard commands
+****************************************************************************/
+
+//////////////Examples//////////////////////////
+/scoreboard objectives add kills totalKillCount kills
+
+/scoreboard objectives remove kills
+
+/scoreboard objectives setdisplay sidebar kills
+
+/scoreboard objectives add level killCount level
+
+/scoreboard objectives setdisplay sidebar level 

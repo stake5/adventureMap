@@ -1,0 +1,21 @@
+[17:59:15] [Server thread/INFO]: Starting minecraft server version 1.8.6
+[17:59:15] [Server thread/INFO]: Loading properties
+[17:59:15] [Server thread/INFO]: Default game type: ADVENTURE
+[17:59:15] [Server thread/INFO]: Generating keypair
+[17:59:15] [Server thread/INFO]: Starting Minecraft server on *:25565
+[17:59:15] [Server thread/INFO]: Using epoll channel type
+[17:59:15] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[17:59:15] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[17:59:15] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[17:59:15] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[17:59:16] [Server thread/INFO]: Preparing level "SkyBlock"
+[17:59:16] [Server thread/INFO]: Preparing start region for level 0
+[17:59:17] [Server thread/INFO]: Preparing spawn area: 42%
+[17:59:18] [Server thread/INFO]: Done (2.100s)! For help, type "help" or "?"
+[17:59:21] [Server thread/INFO]: Stopping the server
+[17:59:21] [Server thread/INFO]: Stopping server
+[17:59:21] [Server thread/INFO]: Saving players
+[17:59:21] [Server thread/INFO]: Saving worlds
+[17:59:21] [Server thread/INFO]: Saving chunks for level 'SkyBlock'/Overworld
+[17:59:21] [Server thread/INFO]: Saving chunks for level 'SkyBlock'/Nether
+[17:59:21] [Server thread/INFO]: Saving chunks for level 'SkyBlock'/The End
