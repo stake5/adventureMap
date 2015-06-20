@@ -1,5 +1,11 @@
 [
   {
+    "uuid": "17db89c2-44e8-3499-84c3-3939cc4a479c",
+    "name": "Confutious",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
     "uuid": "bb22b15d-f8c5-3d54-a86d-993bede9f67c",
     "name": "Rylath",
     "level": 4,
